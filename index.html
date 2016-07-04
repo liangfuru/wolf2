@@ -11,7 +11,7 @@
 		width: 320px;
 		height: 480px;
 		position: relative;
-		background-image: url('game_bg.jpg');
+		background-image: url('images/game_bg.jpg');
 	}
 	#score{
 		color: white;
@@ -24,7 +24,7 @@
 	#progress{
 		width: 180px;
 		height: 16px;
-		background-image: url('progress.png');
+		background-image: url('images/progress.png');
 
 		position: absolute;
 		left: 63px;
@@ -90,7 +90,7 @@
 				var r = (fnRand(1,100) > 80 ) ? "x":"h";
 				oImg.flag = r;
 				oImg.index = 0;
-				oImg.src=oImg.flag+"0.png";
+				oImg.src="images/"+oImg.flag+"0.png";
 				wolfs.appendChild(oImg);
 				//定位
 				var bol = true;
@@ -116,7 +116,7 @@
 						clearInterval(oImg.upAniTimer);
 						oImg.upAniTimer=null;
 					};
-					oImg.src=oImg.flag+oImg.index+".png";
+					oImg.src="images/"+oImg.flag+oImg.index+".png";
 				}, 50);
 
 				//向下在动画
@@ -129,7 +129,7 @@
 				// 			oImg.downAniTimer = null;
 				// 			oWolfs.removeChild(oImg);
 				// 		};
-				// 		oImg.src=oImg.flag+oImg.index+".png";
+				// 		oImg.src="images/"+oImg.flag+oImg.index+".png";
 
 				// 	}, 50)
 
@@ -143,7 +143,7 @@
 							//移除子节点
 							oWolfs.removeChild(oImg);
 						};
-						oImg.src = oImg.flag + oImg.index + '.png';
+						oImg.src ="images/"+ oImg.flag + oImg.index + '.png';
 
 					}, 50);
 				},750)
@@ -163,7 +163,7 @@
 							wolfs.removeChild(oImg);
 							clearInterval(oImg.attachAniTimer);							
 						};
-						oImg.src=oImg.flag+oImg.index+".png";
+						oImg.src="images/"+oImg.flag+oImg.index+".png";
 					}, 30);
 				}
 			}, 500);
